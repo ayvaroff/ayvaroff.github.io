@@ -1,0 +1,28 @@
+{
+  "name": "ayvaroff.github.io",
+  "version": "1.0.0",
+  "description": "CV page",
+  "type": "module",
+  "repository": {
+    "url": "https://github.com/ayvaroff/ayvaroff.github.io",
+    "type": "git"
+  },
+  "author": "Anton Ayvarov <ayvaroff@gmail.com>",
+  "license": "Unlicense",
+  "private": false,
+  "scripts": {
+    "build": "yarn build:css && yarn build:cv",
+    "build:css": "npx @tailwindcss/cli -i ./src/styles.css -o ./docs/styles.css --minify",
+    "build:cv": "node --experimental-transform-types src/generate.ts"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.10",
+    "@types/node": "^24.0.3",
+    "@types/nunjucks": "^3.2.6",
+    "dedent": "^1.6.0",
+    "jspdf": "^3.0.1",
+    "nunjucks": "^3.2.4",
+    "tailwindcss": "^4.1.10",
+    "typescript": "^5.8.3"
+  }
+}

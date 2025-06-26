@@ -1,0 +1,21 @@
+<section id="education">
+  <h2 class="section-title">Education</h2>
+
+  <div class="space-y-6">
+    {% for education_item in education %}
+      <div class="education-card">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="text-[var(--indigo-dye)] text-md font-semibold">{{ education_item.name }}</h3>
+            <p class="text-[var(--caribbean-current)] text-xs font-medium">{{ education_item.degree }}</p>
+            <p class="text-[var(--caribbean-current)] text-xs font-medium">{{ education_item.location }}</p>
+          </div>
+          <p class="text-[var(--jet)] text-xs font-normal">{{ education_item.dates }}</p>
+        </div>
+        <p class="text-[var(--jet)] text-sm font-normal mt-2 leading-relaxed">
+          {{ education_item.description }}
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+</section>

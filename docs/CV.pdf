@@ -1,0 +1,578 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 5568
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F2 36 Tf
+43.1999999999999957 TL
+0. g
+36.8503937007874072 790.6396062992125735 Td
+(Anton Ayvarov) Tj
+ET
+BT
+/F1 12 Tf
+14.3999999999999986 TL
+0.208 g
+36.8503937007874072 761.839606299212619 Td
+(Frontend | Fullstack Developer) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0.157 0.294 0.388 rg
+36.8503937007874072 727.2796062992125599 Td
+(About Me) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 698.4796062992126053 Td
+(I'm a frontend developer with over 6 years of experience and a good grasp of) Tj
+T* (backend work. My background covers web, cross-platform mobile, and) Tj
+T* (fullstack projects - mostly with TypeScript, React, and Node.js. I've built) Tj
+T* (everything from complex web apps to internal tools, and I'm comfortable) Tj
+T* (working with CI/CD, Docker, and AWS S3. If needed, I can take a feature from) Tj
+T* (idea to production, including backend and database work.) Tj
+T* () Tj
+T* (I don't afraid of getting out from my comfort zone and learning new things,) Tj
+T* (enjoy solving complex problems, and always aim to deliver work I'm proud of.) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0.157 0.294 0.388 rg
+36.8503937007874072 559.2796062992126735 Td
+(Experience) Tj
+ET
+BT
+/F2 11 Tf
+13.1999999999999993 TL
+0. g
+36.8503937007874072 530.479606299212719 Td
+(Evolution - Frontend | Fullstack Developer) Tj
+ET
+BT
+/F1 8 Tf
+9.5999999999999996 TL
+0.208 g
+36.8503937007874072 514.6396062992125735 Td
+(Jan 2020 – Present) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 491.5996062992126667 Td
+(- Built and maintained web apps and internal tools with TypeScript, React, and) Tj
+T* (Node.js) Tj
+T* (- Moved CI/CD pipelines from Jenkins to GitLab CI and vice versa, making) Tj
+T* (deployments smoother) Tj
+T* (- Managed and extended Storybook with custom addons that teams use as tools in) Tj
+T* (their daily work) Tj
+T* (- Improved compliance and core game components, always focusing on code) Tj
+T* (quality) Tj
+T* (- Helped design and roll out a system for iOS bundle deployment and delivery) Tj
+T* (- Participated in technical interviews and mentored junior developers in the) Tj
+T* (Evolution TypeScript Bootcamp) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 357.1996062992126326 Td
+(Stack: ) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+69.3503937007874072 357.1996062992126326 Td
+(TypeScript | React | Node.js | PostgreSQL | Python | Docker | GitLab CI) Tj
+T* (| AWS S3 | Jenkins | Storybook) Tj
+ET
+BT
+/F2 11 Tf
+13.1999999999999993 TL
+0. g
+36.8503937007874072 316.3996062992126781 Td
+(Movika - Frontend Developer) Tj
+ET
+BT
+/F1 8 Tf
+9.5999999999999996 TL
+0.208 g
+36.8503937007874072 300.5596062992126463 Td
+(Aug 2021 - Sep 2023) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 277.5196062992126826 Td
+(- Designed and implemented features for a custom interactive video editor \(not) Tj
+T* (video editor\) using TypeScript, React, and D3.js) Tj
+T* (- Made key architectural decisions to improve scalability and maintainability) Tj
+T* (- Refactored and modularized Redux store logic for better state management) Tj
+T* (- Introduced TypeScript and set up linters to improve code quality) Tj
+T* (- Established Storybook for component development and testing) Tj
+T* (- Wrote and maintained tests with Jest to ensure code reliability) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 191.1196062992127054 Td
+(Stack: ) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+69.3503937007874072 191.1196062992127054 Td
+(TypeScript | React | Redux | D3.js | Jest | Architectural Design |) Tj
+T* (Storybook) Tj
+ET
+BT
+/F2 11 Tf
+13.1999999999999993 TL
+0. g
+36.8503937007874072 150.3196062992127509 Td
+(Freelance - Frontend | Fullstack Developer) Tj
+ET
+BT
+/F1 8 Tf
+9.5999999999999996 TL
+0.208 g
+36.8503937007874072 134.479606299212719 Td
+(May 2015 - Aug 2021) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 111.4396062992126417 Td
+(- Developed various web and cross-platform mobile applications using React,) Tj
+T* (Redux, Node.js, and Next.js) Tj
+T* (- Built cross-platform mobile application using Cordova and Ionic Framework and) Tj
+T* (published it on AppStore/Google Play) Tj
+T* (- Created iOS-applications prototypes using Swift) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 49.0396062992126645 Td
+(Stack: ) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+69.3503937007874072 49.0396062992126645 Td
+(TypeScript | JavaScript | React | Node.js | Next.js | Cordova | Ionic) Tj
+T* (Framework | Angular | Swift) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0. g
+435.1214173228345317 805.0396062992125508 Td
+(Email) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0. g
+435.1214173228345317 790.6396062992125735 Td
+(ayvaroff@gmail.com) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0. g
+435.1214173228345317 761.839606299212619 Td
+(LinkedIn) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0. g
+435.1214173228345317 747.4396062992126417 Td
+(linkedin.com/in/ayvaroff) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0. g
+435.1214173228345317 718.6396062992125735 Td
+(GitHub) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0. g
+435.1214173228345317 704.2396062992125962 Td
+(github.com/ayvaroff) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0.157 0.294 0.388 rg
+435.1214173228345317 661.0396062992126645 Td
+(Skills) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+435.1214173228345317 646.6396062992125735 Td
+(TypeScript | JavaScript |) Tj
+T* (React | Node.js | Python |) Tj
+T* (Next.js | MongoDB |) Tj
+T* (PostgreSQL | Docker |) Tj
+T* (Docker Compose | CI/CD |) Tj
+T* (AWS S3 | RESTful APIs |) Tj
+T* (Git) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0.157 0.294 0.388 rg
+435.1214173228345317 531.4396062992126417 Td
+(Languages) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+435.1214173228345317 517.0396062992126645 Td
+(English | Russian |) Tj
+T* (Portuguese) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 4514
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F2 11 Tf
+13.1999999999999993 TL
+0. g
+36.8503937007874072 805.0396062992125508 Td
+(Serenity - Frontend Developer) Tj
+ET
+BT
+/F1 8 Tf
+9.5999999999999996 TL
+0.208 g
+36.8503937007874072 789.1996062992125189 Td
+(May 2018 - Nov 2019) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 766.1596062992125553 Td
+(- Developed and optimized features for a real estate platform \(properstar.com\)) Tj
+T* (using React and Redux) Tj
+T* (- Analyzed and refactored React application for performance improvements) Tj
+T* (- Collaborated with the team to deliver new features and maintain high code quality) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 715.7596062992125781 Td
+(Stack: ) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+69.3503937007874072 715.7596062992125781 Td
+(JavaScript | React | Redux | Jest) Tj
+ET
+BT
+/F2 11 Tf
+13.1999999999999993 TL
+0. g
+36.8503937007874072 686.9596062992126235 Td
+(MRSPro.ru - Frontend Developer) Tj
+ET
+BT
+/F1 8 Tf
+9.5999999999999996 TL
+0.208 g
+36.8503937007874072 671.1196062992125917 Td
+(May 2017 - May 2018) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 648.0796062992126281 Td
+(- Developed new features using JavaScript and React for a cross-platform) Tj
+T* (application "ConstructionControl" \(StroyControl\)) Tj
+T* (- Developed new program interfaces using HTML5, CSS3, Material-UI) Tj
+T* (- Improved the in-app 2D engine based on the Canvas API) Tj
+T* (- Organized frontend meet-ups to share best practices) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 585.6796062992125371 Td
+(Stack: ) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+69.3503937007874072 585.6796062992125371 Td
+(JavaScript | React | Canvas API | HTML5 | CSS3 | Material-UI) Tj
+ET
+BT
+/F2 11 Tf
+13.1999999999999993 TL
+0. g
+36.8503937007874072 556.8796062992125826 Td
+(Elephant Games - Sowtware | Game Developer) Tj
+ET
+BT
+/F1 8 Tf
+9.5999999999999996 TL
+0.208 g
+36.8503937007874072 541.0396062992126645 Td
+(Nov 2015 - Mar 2017) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 517.9996062992125871 Td
+(- Developed and supported internal tools using C#/.NET, PHP, and JavaScript) Tj
+T* (- Built admin panels for game event and player data management) Tj
+T* (- Developed game features for “Midnight Castle” using Lua) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 479.5996062992126099 Td
+(Stack: ) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+69.3503937007874072 479.5996062992126099 Td
+(Lua | C#/.NET | PHP | JavaScript) Tj
+ET
+BT
+/F2 11 Tf
+13.1999999999999993 TL
+0. g
+36.8503937007874072 450.7996062992125985 Td
+(Bencom LLC - Junior iOS Developer) Tj
+ET
+BT
+/F1 8 Tf
+9.5999999999999996 TL
+0.208 g
+36.8503937007874072 434.9596062992125667 Td
+(Sep 2014 - May 2015) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 411.9196062992126031 Td
+(- Participated in iOS app development using Objective-C and Swift) Tj
+T* (- Supported and improved the “Relax UP” mobile app) Tj
+T* (- Prototyped a game with SpriteKit and Swift) Tj
+T* (- Gained experience in mobile UI and app deployment) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 361.5196062992126258 Td
+(Stack: ) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+69.3503937007874072 361.5196062992126258 Td
+(Objective-C | Swift | iOS) Tj
+ET
+BT
+/F2 10 Tf
+12. TL
+0.157 0.294 0.388 rg
+36.8503937007874072 303.9196062992126599 Td
+(Education) Tj
+ET
+BT
+/F2 11 Tf
+13.1999999999999993 TL
+0. g
+36.8503937007874072 275.1196062992125917 Td
+(Mari State Technical University \(MarSTU\)) Tj
+ET
+BT
+/F1 8 Tf
+9.5999999999999996 TL
+0.208 g
+36.8503937007874072 259.2796062992126735 Td
+(Specialist, Computer and Information Systems Security/Information Assurance) Tj
+ET
+BT
+/F1 8 Tf
+9.5999999999999996 TL
+0.208 g
+36.8503937007874072 247.7596062992126917 Td
+(2012 - 2016) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 224.7196062992127281 Td
+(Studied cryptography and security, network security, information security) Tj
+T* (management, risks analysis, computer programming.) Tj
+ET
+BT
+/F2 11 Tf
+13.1999999999999993 TL
+0. g
+36.8503937007874072 183.9196062992127736 Td
+(RUDN University: Peoples' Friendship University of Russia) Tj
+ET
+BT
+/F1 8 Tf
+9.5999999999999996 TL
+0.208 g
+36.8503937007874072 168.0796062992127418 Td
+(Mathematics) Tj
+ET
+BT
+/F1 8 Tf
+9.5999999999999996 TL
+0.208 g
+36.8503937007874072 156.55960629921276 Td
+(2008 - 2012) Tj
+ET
+BT
+/F1 10 Tf
+12. TL
+0.208 g
+36.8503937007874072 133.5196062992127963 Td
+(Studied mathematical analysis, linear algebra, differential equations, probability) Tj
+T* (theory, mathematical statistics, numerical methods.) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R ]
+/Count 2
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 7 0 R
+/F2 8 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+9 0 obj
+<<
+/Producer (jsPDF 3.0.1)
+/Title (Anton Ayvarov"s CV)
+/Author (Anton Ayvarov)
+/CreationDate (D:20250626203524+01'00')
+>>
+endobj
+10 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+/Lang (en)
+>>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000010475 00000 n 
+0000010793 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000005772 00000 n 
+0000005909 00000 n 
+0000010538 00000 n 
+0000010663 00000 n 
+0000010907 00000 n 
+0000011044 00000 n 
+trailer
+<<
+/Size 11
+/Root 10 0 R
+/Info 9 0 R
+/ID [ <40DB2330D566EE3B49D33ED551AEF7BF> <40DB2330D566EE3B49D33ED551AEF7BF> ]
+>>
+startxref
+11159
+%%EOF

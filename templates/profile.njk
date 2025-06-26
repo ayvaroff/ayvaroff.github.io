@@ -1,0 +1,59 @@
+<section class="flex flex-col items-center text-center" id="profile-info">
+  <div id="profile-image" class="mb-4 transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform">
+    <div style="background-image: url({{ profile_image }});" class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-40 w-40 md:h-48 md:w-48 shadow-md border-4 border-[var(--platinum)]"></div>
+  </div>
+
+  <h1 class="text-[var(--indigo-dye)] text-2xl md:text-3xl font-bold leading-tight tracking-tight">{{ full_name }}</h1>
+  <p class="text-[var(--caribbean-current)] text-lg font-medium mt-1">{{ title }}</p>
+  <p class="text-[var(--jet)] text-base font-normal">{{ location }}</p>
+  <a class="text-[var(--caribbean-current)] text-sm font-normal hover:underline mt-1" href="mailto:{{ contacts.email }}">{{ contacts.email }}</a>
+
+  <div class="flex gap-3 mt-4">
+    {% for social_item in social %}
+      <a aria-label={{ social_item.name }} class="social-icon-button" href="{{ social_item.url }}" target="_blank" rel="noopener">
+        {# Safely render SVG icon #}
+        <span class="size-[20px]">{{ social_item.icon_svg | safe }}</span>
+      </a>
+    {% endfor %}
+  </div>
+
+  <div class="flex items-center justify-center mt-6 w-full">
+    <a class="download-button w-full" href="./CV.pdf" target="_blank" rel="noopener">
+      <span class="size-[18px] mr-2">{{ icons_svg.common.download | safe }}</span>
+      <span class="truncate">Download Resume (PDF)</span>
+    </a>
+  </div>
+
+  <script>
+    // Add mouse hover effect to profile image
+    // It could be done using CSS, but JS was faster to implement
+    // Also, this is the source of inspiration: https://ibelick.com/blog/create-tilt-effect-with-react
+    const profileImage = document.getElementById("profile-image");
+    const rotationFactor = 7; // Adjust this value to change the tilt sensitivity
+    let animationFrameId;
+
+    function handleMouseMove(e) {
+      const profileImageElement = e.currentTarget;
+      const box = profileImageElement.getBoundingClientRect();
+      const relativeX = e.clientX - box.left;
+      const relativeY = e.clientY - box.top;
+      const centerX = box.width / 2;
+      const centerY = box.height / 2;
+      const rotateX = (relativeY - centerY) / rotationFactor;
+      const rotateY = (centerX - relativeX) / rotationFactor;
+
+      cancelAnimationFrame(animationFrameId);
+      animationFrameId = requestAnimationFrame(() => {
+        profileImage.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1, 1, 1)`;
+      });
+    };
+
+    function handleMouseOut() {
+      cancelAnimationFrame(animationFrameId);
+      profileImage.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+    }
+
+    profileImage.addEventListener("mousemove", handleMouseMove);
+    profileImage.addEventListener("mouseout", handleMouseOut);
+  </script>
+</section>

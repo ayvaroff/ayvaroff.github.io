@@ -1,0 +1,180 @@
+import icons from "./content/icons.ts";
+
+export default {
+  profile_image: "https://avatars.githubusercontent.com/u/10350182?v=4",
+  full_name: "Anton Ayvarov",
+  title: "Frontend | Fullstack Developer",
+  location: "Lisbon, Portugal 🇵🇹",
+  languages: ["English", "Russian", "Portuguese"],
+  contacts: {
+    email: "ayvaroff@gmail.com",
+  },
+  social: [
+    {
+      name: "LinkedIn",
+      icon_svg: icons.social.LinkedIn,
+      url: "https://linkedin.com/in/ayvaroff",
+    },
+    {
+      name: "GitHub",
+      icon_svg: icons.social.GitHub,
+      url: "https://github.com/ayvaroff",
+    },
+  ],
+  summary: "Experienced Frontend Developer with over 5 years of industry experience, complemented by a solid understanding of Backend Development. My portfolio includes a diverse range of projects, including cross-platform mobile applications. I am committed to continuous learning and strive to deliver high-quality products. I'm always eager to embrace new challenges and technologies, and get out of my comfort zone.",
+  skills: ["TypeScript", "JavaScript", "React", "Node.js" , "Python", "Next.js", "MongoDB", "PostgreSQL", "Docker", "Docker Compose", "CI/CD", "AWS S3", "RESTful APIs", "Git"],
+  experience: [
+    {
+      title: "Frontend | Fullstack Developer",
+      logo_base64: "data:image/jpeg;base64,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",
+      company: "Evolution",
+      location: "Lisbon, Portugal | Riga, Latvia",
+      dates: "Jan 2020 – Present",
+      description: [
+        "As a member of the Core team, my responsibilities included:",
+        "Migrating pipelines from Jenkins to GitLab CI and designing new pipelines",
+        "Managing the team's Storybook and visual tests, and creating custom Storybook addons.",
+        "Maintaining and improving various CI/CD scripts and pipelines.",
+        "Maintaining and enhancing various Compliance and game core components.",
+        "Developing internal tools and scripts using TypeScript, React, Python, and Node.js across different teams.",
+        "Contributing to the design and implementation of a system for iOS bundle deployment.",
+        "Participating in candidate interviews to help identify top talent.",
+        "Mentoring a student in the Evolution TypeScript bootcamp, providing guidance and support to foster their learning and development.",
+      ],
+      stack: ["TypeScript", "React", "Node.js", "PostgreSQL", "Python", "Docker", "GitLab CI", "AWS S3", "Jenkins", "Storybook"],
+    },
+    {
+      title: "Frontend Developer",
+      logo_base64: "data:image/jpeg;base64,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",
+      company: "Movika",
+      location: "Remote | Freelance",
+      dates: "Aug 2021 - Sep 2023",
+      description: [
+        "I was part of a team tasked with developing a custom interactive video editor (not a video editor). My contributions included:",
+        "Making significant architectural decisions and implementing them.",
+        "Extracting existing logic to create a separate editor tool based on D3.js and TypeScript.",
+        "Enhancing various React components for better maintainability and testability, and building modular systems when necessary.",
+        "Introducing TypeScript to the project.",
+        "Implementing linters for improved maintainability and team collaboration.",
+        "Establishing a Storybook for working with custom components.",
+        "Restructuring and refactoring the project's Redux store.",
+      ],
+      stack: ["TypeScript", "React", "Redux", "D3.js", "Jest", "Architectural Design", "Storybook"],
+    },
+    {
+      title: "Frontend | Fullstack Developer",
+      logo_base64: null,
+      company: "Freelance",
+      location: "Remote | Freelance",
+      dates: "May 2015 - Aug 2021",
+      description: [
+        "worked on various web-application developments using React, Redux, Node.js, Next.js",
+        "worked on cross-platform mobile applications using Cordova and Ionic Framework and their publication on AppStore/Google Play",
+        "made few iOS-application prototypes using Swift",
+      ],
+      stack: ["TypeScript", "JavaScript", "React", "Node.js", "Next.js", "Cordova", "Ionic Framework", "Angular", "Swift"],
+    },
+    {
+      title: "Frontend Developer",
+      logo_base64: "data:image/jpeg;base64,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",
+      company: "Serenity",
+      location: "Yoshkar-Ola, Mari El, Russia",
+      dates: "May 2018 - Nov 2019",
+      description: [
+        "properstar.com - platform for buying/renting real estate",
+        "participated in web-application development",
+        "added new components and features using React, Redux, HTML5, Bootstrap",
+        "analyzed React application for possible optimizations",
+      ],
+      stack: ["JavaScript", "React", "Redux", "Jest"],
+    },
+    {
+      title: "Frontend Developer",
+      logo_base64: null,
+      company: "MRSPro.ru",
+      location: "Yoshkar-Ola, Mari El, Russia",
+      dates: "May 2017 - May 2018",
+      description: [
+        "mrspro.ru - a tool for construction companies",
+        'I was in a team which developed cross-platform application "ConstructionControl" (StroyControl)',
+        "added new features using JavaScript and React",
+        "added new program interfaces using HTML5, CSS3, Material-UI",
+        "organized frontend meet-ups in a company",
+        "improved and extended in-app 2d engine based on HTML5 Canvas API",
+      ],
+      stack: ["JavaScript", "React", "Canvas API", "HTML5", "CSS3", "Material-UI"],
+    },
+    {
+      title: "Sowtware | Game Developer",
+      logo_base64: "data:image/jpeg;base64,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",
+      company: "Elephant Games",
+      location: "Yoshkar-Ola, Mari El, Russia",
+      dates: "Nov 2015 - Mar 2017",
+      description: [
+        "worked in a small team that developed and supported internal tools using C# and .NET",
+        "developed admin tools to modify and support game events and players save data using PHP, JS",
+        'worked on "Midnight Castle" game deloping new features using Lua',
+      ],
+      stack: ["Lua", "C# | .NET", "PHP", "JavaScript"],
+    },
+    {
+      title: "Junior iOS Developer",
+      logo_base64: null,
+      company: "Bencom LLC",
+      location: "Yoshkar-Ola, Mari El, Russia",
+      dates: "Sep 2014 - May 2015",
+      description: [
+        "Worked in a small startup and participated in iOS application development using Objective-C",
+        'supported and improved mobile application "Relax UP"',
+        "prototyped a game using SpriteKit and Swift",
+      ],
+      stack: ["Objective-C", "Swift", "iOS"],
+    },
+  ],
+  projects: [
+    {
+      name: "Доступное образование (eduaccess.ru)",
+      stack: ["TypeScript", "React", "Next.js", "MongoDB", "Docker", "Docker Compose", "CI/CD", "S3", "RESTful APIs"],
+      source_code_link: null,
+      link: "https://eduaccess.ru",
+      description: "Developed a web application using Next.js with an admin dashboard for managing scholarship applications. The project features a multi-step form, secure authentication, and role-based access. Deployed on Yandex Cloud with automated CI/CD pipelines using GitHub Actions, Docker containers, and MongoDB for data storage. Integrated cloud storage, backup, and managed environment variables for both development and production.",
+    },
+    {
+      name: "Bootcamp final project",
+      stack: ["TypeScript", "Scala", "WebSockets", "Webpack", "Canvas API"],
+      source_code_link: "https://github.com/ayvaroff/multiplayer-game",
+      link: null,
+      description: "A real-time multiplayer shooter game with a custom TypeScript frontend (ECS architecture, Canvas API) and a Scala backend (http4s, WebSocket, REST API). Built from scratch as a bootcamp final project.",
+    },
+    {
+      name: "CS50 final project",
+      stack: ["Swift", "Python", "Flask", "RESTful APIs"],
+      source_code_link: "https://github.com/ayvaroff/cs50-final-project",
+      link: null,
+      description: [
+        "An iOS application designed for fitness and gym clubs, allowing users to view class schedules, register for classes, and communicate with the club via messages.",
+        "This project was developed as a CS50 final project and includes both an iOS client and a Flask-based backend server with mocked data.",
+      ],
+    },
+  ],
+  education: [
+    {
+      name: "Mari State Technical University (MarSTU)",
+      location: "Yoshkar-Ola, Mari El, Russia",
+      degree: "Specialis, Computer and Information Systems Security/Information Assurance",
+      dates: "2012 - 2016",
+      description: [
+        "Studied cryptography and security, network security, information security management, risks analysis, computer programming.",
+      ],
+    },
+    {
+      name: "RUDN University: Peoples' Friendship University of Russia",
+      location: "Moscow, Russia",
+      degree: "Mathematics",
+      dates: "2008 - 2012",
+      description: [
+        "Studied mathematical analysis, linear algebra, differential equations, probability theory, mathematical statistics, numerical methods.",
+      ],
+    }
+  ]
+} as const;
