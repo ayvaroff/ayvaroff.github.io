@@ -3,8 +3,16 @@
 {% block head %}
   {{ super() }}
 
+  <meta property="og:title" content="{{ full_name }} CV" />
+  <meta property="og:description" content="{{ title }}, {{ full_name }}" />
+  <meta property="og:url" content="https://ayvaroff.github.io" />
+  <meta property="og:site_name" content="{{ full_name }} CV" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:image" content="{{ profile_image }}">
+  <meta property="og:type" content="profile" />
+
   <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
-  <link href="./styles.css" rel="stylesheet">
+  <link href="./{{ styles_css_file }}" rel="stylesheet">
 {% endblock %}
 
 {% block title %}{{ full_name }} CV{% endblock %}
