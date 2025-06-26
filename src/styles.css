@@ -44,5 +44,5 @@ body {
 }
 
 .placeholder-logo {
-  @apply flex items-center justify-center h-12 w-12 bg-[var(--platinum)] rounded-md mt-1 text-[var(--indigo-dye)];
+  @apply items-center justify-center h-12 w-12 bg-[var(--platinum)] rounded-md mt-1 text-[var(--indigo-dye)] hidden sm:flex;
 }

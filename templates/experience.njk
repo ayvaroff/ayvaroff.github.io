@@ -6,7 +6,7 @@
       <div class="experience-card">
         <div class="flex gap-4 items-start">
           {% if experience_item.logo_base64 %}
-            <img src={{ experience_item.logo_base64 }} alt={{ experience_item.company }} class="h-12 w-12 object-contain rounded-md mt-1"/>
+            <img src={{ experience_item.logo_base64 }} alt={{ experience_item.company }} class="h-12 w-12 object-contain rounded-md mt-1 hidden sm:block"/>
           {% else %}
             <div class="placeholder-logo">
               <div class="w-6 h-6">{{ icons_svg.common.placeholder_logo | safe }}</div>
