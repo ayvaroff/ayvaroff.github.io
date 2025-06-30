@@ -137,7 +137,7 @@ export default {
       stack: ["TypeScript", "React", "Next.js", "MongoDB", "Docker", "Docker Compose", "CI/CD", "S3", "RESTful APIs"],
       source_code_link: null,
       link: "https://eduaccess.ru",
-      description: "A solo-developed web application using Next.js with an admin dashboard for managing scholarship applications. The project features a multi-step form, secure authentication, and role-based access. Deployed on Yandex Cloud with automated CI/CD pipelines using GitHub Actions, Docker containers, and MongoDB for data storage. Integrated cloud storage, backup, and managed environment variables for both development and production.",
+      description: "A solo-developed SaaS application using Next.js with an admin dashboard for managing scholarship applications. The project features a multi-step form, secure authentication, and role-based access. Deployed on Yandex Cloud with automated CI/CD pipelines using GitHub Actions, Docker containers, and MongoDB for data storage. Integrated cloud storage, backup, and managed environment variables for both development and production.",
     },
     {
       name: "Bootcamp final project",
