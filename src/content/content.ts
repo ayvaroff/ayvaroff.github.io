@@ -104,7 +104,7 @@ export default {
       stack: ["JavaScript", "React", "Canvas API", "HTML5", "CSS3", "Material-UI"],
     },
     {
-      title: "Sowtware | Game Developer",
+      title: "Software | Game Developer",
       logo_base64: logos.elephant_games,
       company: "Elephant Games",
       location: "Yoshkar-Ola, Mari El, Russia",
