@@ -9,8 +9,9 @@ import { generatePdfDocument } from "./pdf/pdf.ts";
 const TEMPLATES_DIRECTORY = "templates";
 const MAIN_TEMPLATE = "main.njk";
 const OUTPUT_DIRECTORY = "docs";
-const OUTPUT_DOCUMENT = path.join(OUTPUT_DIRECTORY, "index.html");
-const OUTPUT_PDF = path.join(OUTPUT_DIRECTORY, "CV.pdf");
+const OUTPUT_DOCUMENT_PATH = path.join(OUTPUT_DIRECTORY, "index.html");
+const OUTPUT_PDF_NAME = `${cv.full_name.replace(/\s+/g, "_")}_CV.pdf`;
+const OUTPUT_PDF_PATH = path.join(OUTPUT_DIRECTORY, OUTPUT_PDF_NAME);
 
 generateDocument()
   .then(() => {
@@ -40,13 +41,14 @@ async function generateDocument() {
   const content = nunjucks.render(MAIN_TEMPLATE, {
     ...cv,
     icons_svg: icons,
-    styles_css_file: stylesCssFileName,
+    file_styles_css: `./${stylesCssFileName}`,
+    file_pdf: `./${OUTPUT_PDF_NAME}`,
   });
 
   // Web version
-  await fs.promises.writeFile(OUTPUT_DOCUMENT, content, "utf-8");
+  await fs.promises.writeFile(OUTPUT_DOCUMENT_PATH, content, "utf-8");
   // PDF version
   if (!process.argv.includes("--no-pdf")) {
-    await generatePdfDocument(OUTPUT_PDF, cv);
+    await generatePdfDocument(OUTPUT_PDF_PATH, cv);
   }
 }
