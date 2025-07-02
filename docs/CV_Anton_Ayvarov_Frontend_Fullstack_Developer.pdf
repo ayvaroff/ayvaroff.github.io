@@ -10,7 +10,7 @@
 endobj
 4 0 obj
 <<
-/Length 5568
+/Length 5581
 >>
 stream
 0.5670000000000001 w
@@ -48,8 +48,8 @@ T* (everything from complex web apps to internal tools, and I'm comfortable) Tj
 T* (working with CI/CD, Docker, and AWS S3. If needed, I can take a feature from) Tj
 T* (idea to production, including backend and database work.) Tj
 T* () Tj
-T* (I don't afraid of getting out from my comfort zone and learning new things,) Tj
-T* (enjoy solving complex problems, and always aim to deliver work I'm proud of.) Tj
+T* (I'm not afraid to step out of my comfort zone and learn new things, enjoy) Tj
+T* (solving complex problems, and always aim to deliver work I'm proud of.) Tj
 ET
 BT
 /F2 10 Tf
@@ -78,16 +78,16 @@ BT
 0.208 g
 36.8503937007874072 491.5996062992126667 Td
 (- Built and maintained web apps and internal tools with TypeScript, React, and) Tj
-T* (Node.js) Tj
-T* (- Moved CI/CD pipelines from Jenkins to GitLab CI and vice versa, making) Tj
-T* (deployments smoother) Tj
+T* (Node.js.) Tj
+T* (- Migrated CI/CD pipelines between Jenkins and GitLab CI, making deployments) Tj
+T* (smoother.) Tj
 T* (- Managed and extended Storybook with custom addons that teams use as tools in) Tj
-T* (their daily work) Tj
+T* (their daily work.) Tj
 T* (- Improved compliance and core game components, always focusing on code) Tj
-T* (quality) Tj
-T* (- Helped design and roll out a system for iOS bundle deployment and delivery) Tj
+T* (quality.) Tj
+T* (- Helped design and roll out a system for iOS bundle deployment and delivery.) Tj
 T* (- Participated in technical interviews and mentored junior developers in the) Tj
-T* (Evolution TypeScript Bootcamp) Tj
+T* (Evolution TypeScript Bootcamp.) Tj
 ET
 BT
 /F2 10 Tf
@@ -123,13 +123,13 @@ BT
 12. TL
 0.208 g
 36.8503937007874072 277.5196062992126826 Td
-(- Designed and implemented features for a custom interactive video editor \(not) Tj
-T* (video editor\) using TypeScript, React, and D3.js) Tj
-T* (- Made key architectural decisions to improve scalability and maintainability) Tj
-T* (- Refactored and modularized Redux store logic for better state management) Tj
-T* (- Introduced TypeScript and set up linters to improve code quality) Tj
-T* (- Established Storybook for component development and testing) Tj
-T* (- Wrote and maintained tests with Jest to ensure code reliability) Tj
+(- Designed and implemented features for a custom interactive video editor \(not a) Tj
+T* (typical video editor\) using TypeScript, React, and D3.js.) Tj
+T* (- Made key architectural decisions to improve scalability and maintainability.) Tj
+T* (- Refactored and modularized Redux store logic for better state management.) Tj
+T* (- Introduced TypeScript and set up linters to improve code quality.) Tj
+T* (- Established Storybook for component development and testing.) Tj
+T* (- Wrote and maintained tests with Jest to ensure code reliability.) Tj
 ET
 BT
 /F2 10 Tf
@@ -166,10 +166,10 @@ BT
 0.208 g
 36.8503937007874072 111.4396062992126417 Td
 (- Developed various web and cross-platform mobile applications using React,) Tj
-T* (Redux, Node.js, and Next.js) Tj
+T* (Redux, Node.js, and Next.js.) Tj
 T* (- Built cross-platform mobile application using Cordova and Ionic Framework and) Tj
-T* (published it on AppStore/Google Play) Tj
-T* (- Created iOS-applications prototypes using Swift) Tj
+T* (published it on the App Store/Google Play.) Tj
+T* (- Created iOS application prototypes using Swift.) Tj
 ET
 BT
 /F2 10 Tf
@@ -275,7 +275,7 @@ endobj
 endobj
 6 0 obj
 <<
-/Length 4514
+/Length 4537
 >>
 stream
 0.5670000000000001 w
@@ -300,9 +300,9 @@ BT
 0.208 g
 36.8503937007874072 766.1596062992125553 Td
 (- Developed and optimized features for a real estate platform \(properstar.com\)) Tj
-T* (using React and Redux) Tj
-T* (- Analyzed and refactored React application for performance improvements) Tj
-T* (- Collaborated with the team to deliver new features and maintain high code quality) Tj
+T* (using React and Redux.) Tj
+T* (- Analyzed and refactored the React application for performance improvements.) Tj
+T* (- Collaborated with the team to deliver new features and maintain high code quality.) Tj
 ET
 BT
 /F2 10 Tf
@@ -338,10 +338,10 @@ BT
 0.208 g
 36.8503937007874072 648.0796062992126281 Td
 (- Developed new features using JavaScript and React for a cross-platform) Tj
-T* (application "ConstructionControl" \(StroyControl\)) Tj
-T* (- Developed new program interfaces using HTML5, CSS3, Material-UI) Tj
-T* (- Improved the in-app 2D engine based on the Canvas API) Tj
-T* (- Organized frontend meet-ups to share best practices) Tj
+T* (application, "ConstructionControl" \(StroyControl\).) Tj
+T* (- Developed new user interfaces using HTML5, CSS3, Material-UI.) Tj
+T* (- Improved the in-app 2D engine based on the Canvas API.) Tj
+T* (- Organized frontend meet-ups to share best practices.) Tj
 ET
 BT
 /F2 10 Tf
@@ -376,9 +376,9 @@ BT
 12. TL
 0.208 g
 36.8503937007874072 517.9996062992125871 Td
-(- Developed and supported internal tools using C#/.NET, PHP, and JavaScript) Tj
-T* (- Built admin panels for game event and player data management) Tj
-T* (- Developed game features for “Midnight Castle” using Lua) Tj
+(- Developed and supported internal tools using C#/.NET, PHP, and JavaScript.) Tj
+T* (- Built admin panels for game event and player data management.) Tj
+T* (- Developed game features for “Midnight Castle” using Lua.) Tj
 ET
 BT
 /F2 10 Tf
@@ -413,10 +413,10 @@ BT
 12. TL
 0.208 g
 36.8503937007874072 411.9196062992126031 Td
-(- Participated in iOS app development using Objective-C and Swift) Tj
-T* (- Supported and improved the “Relax UP” mobile app) Tj
-T* (- Prototyped a game with SpriteKit and Swift) Tj
-T* (- Gained experience in mobile UI and app deployment) Tj
+(- Participated in iOS app development using Objective-C and Swift.) Tj
+T* (- Supported and improved the “Relax UP” mobile app.) Tj
+T* (- Prototyped a game with SpriteKit and Swift.) Tj
+T* (- Gained experience in mobile UI and app deployment.) Tj
 ET
 BT
 /F2 10 Tf
@@ -466,7 +466,7 @@ BT
 0.208 g
 36.8503937007874072 224.7196062992127281 Td
 (Studied cryptography and security, network security, information security) Tj
-T* (management, risks analysis, computer programming.) Tj
+T* (management, risk analysis, and computer programming.) Tj
 ET
 BT
 /F2 11 Tf
@@ -495,7 +495,7 @@ BT
 0.208 g
 36.8503937007874072 133.5196062992127963 Td
 (Studied mathematical analysis, linear algebra, differential equations, probability) Tj
-T* (theory, mathematical statistics, numerical methods.) Tj
+T* (theory, mathematical statistics, and numerical methods.) Tj
 ET
 endstream
 endobj
@@ -541,7 +541,7 @@ endobj
 /Producer (jsPDF 3.0.1)
 /Title (Anton Ayvarov"s CV)
 /Author (Anton Ayvarov)
-/CreationDate (D:20250630085219+01'00')
+/CreationDate (D:20250702173408+01'00')
 >>
 endobj
 10 0 obj
@@ -556,23 +556,23 @@ endobj
 xref
 0 11
 0000000000 65535 f 
-0000010475 00000 n 
-0000010793 00000 n 
+0000010511 00000 n 
+0000010829 00000 n 
 0000000015 00000 n 
 0000000152 00000 n 
-0000005772 00000 n 
-0000005909 00000 n 
-0000010538 00000 n 
-0000010663 00000 n 
-0000010907 00000 n 
-0000011044 00000 n 
+0000005785 00000 n 
+0000005922 00000 n 
+0000010574 00000 n 
+0000010699 00000 n 
+0000010943 00000 n 
+0000011080 00000 n 
 trailer
 <<
 /Size 11
 /Root 10 0 R
 /Info 9 0 R
-/ID [ <61CC72BA34FBC1CC6360EFF534057294> <61CC72BA34FBC1CC6360EFF534057294> ]
+/ID [ <5E9E2AC0C4B7A47F61CC8D03063368DE> <5E9E2AC0C4B7A47F61CC8D03063368DE> ]
 >>
 startxref
-11159
+11195
 %%EOF

@@ -10,7 +10,7 @@ const TEMPLATES_DIRECTORY = "templates";
 const MAIN_TEMPLATE = "main.njk";
 const OUTPUT_DIRECTORY = "docs";
 const OUTPUT_DOCUMENT_PATH = path.join(OUTPUT_DIRECTORY, "index.html");
-const OUTPUT_PDF_NAME = `${cv.full_name.replace(/\s+/g, "_")}_CV.pdf`;
+const OUTPUT_PDF_NAME = `CV_${cv.full_name.replace(/\s+/g, "_")}_${cv.title.replace(/[^\w]+/g, "_")}.pdf`;
 const OUTPUT_PDF_PATH = path.join(OUTPUT_DIRECTORY, OUTPUT_PDF_NAME);
 
 generateDocument()
