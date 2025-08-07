@@ -28,12 +28,9 @@ const DEFAULT_OPTIONS: PdfRendererOptions = {
  */
 export class PdfRenderer {
   public doc: jsPDF;
+  public cursor: Cursor;
+
   private fontFamily: string = "Helvetica"; // Built-in default font
-  private _cursorX: number;
-  private _cursorY: number;
-  // Initial cursor positions, used for resetting the cursor or using the values when user determines custom cursor positions
-  private _initialCursorX: number;
-  private _initialCursorY: number;
   private options: PdfRendererOptions = DEFAULT_OPTIONS;
 
   constructor(options?: Partial<PdfRendererOptions>) {
@@ -45,37 +42,16 @@ export class PdfRenderer {
       format: "a4",
       putOnlyUsedFonts: true,
     });
-    this._cursorX = this._initialCursorX = this.options.initialCursorX || this.options.marginHorizontal;
-    this._cursorY = this._initialCursorY = this.options.initialCursorY || this.options.marginVertical;
-  }
 
-  get cursorX(): number {
-    return this._cursorX;
-  }
-
-  set cursorX(value: number) {
-    this._cursorX = value;
-    this._initialCursorX = value; // Update initial cursor X position when set by the user
-  }
-
-  get cursorY(): number {
-    return this._cursorY;
-  }
-
-  set cursorY(value: number) {
-    this._cursorY = value;
-    this._initialCursorY = value; // Update initial cursor Y position when set by the user
+    this.cursor = new Cursor({
+      initialX: this.options.initialCursorX || this.options.marginHorizontal,
+      initialY: this.options.initialCursorY || this.options.marginVertical,
+    });
   }
 
   public addPage() {
     this.doc.addPage();
-    this.resetCursor();
-    return this;
-  }
-
-  public resetCursor() {
-    this._cursorX = this._initialCursorX;
-    this._cursorY = this._initialCursorY;
+    this.cursor.reset();
     return this;
   }
 
@@ -84,7 +60,40 @@ export class PdfRenderer {
     return this;
   }
 
+  public renderTextWithLink(text: string, url: string, options?: RenderTextOptions): PdfRenderer {
+    this.applyTextOptions(options);
+    this.doc.textWithLink(text, this.cursor.x, this.cursor.y, { url, ...options });
+    this.updateCursorPositionAfterText(text);
+    return this;
+  };
+
   public renderText(text: string, options?: RenderTextOptions): PdfRenderer {
+    this.applyTextOptions(options);
+    this.doc.text(text, this.cursor.x, this.cursor.y);
+    this.updateCursorPositionAfterText(text);
+    return this;
+  }
+
+  public moveToTheNextLine(lines = 1, lineHeight?: number): PdfRenderer {
+    const lineHeightToUse = lineHeight || this.doc.getLineHeight();
+    // Increment y position by the line height in mm
+    this.cursor.resetX(); // Reset x position to margin
+    this.cursor.y += lines * lineHeightToUse * this.doc.getLineHeightFactor() * PT_TO_MM;
+
+    //check if the cursorY exceeds the page height, if so, add a new page
+    if (this.cursor.y > this.doc.internal.pageSize.getHeight() - this.options.marginVertical) {
+      this.addPage();
+    }
+    return this;
+  }
+
+  public getPageContentWidth(): number {
+    const pageWidth = this.doc.internal.pageSize.getWidth();
+    const usableWidth = pageWidth - this.options.marginHorizontal * 2;
+    return usableWidth;
+  }
+
+  private applyTextOptions(options?: RenderTextOptions) {
     // only apply options if they are provided, otherwise previous settings will be used
     if (options?.fontSize) {
       this.doc.setFontSize(options.fontSize);
@@ -95,27 +104,56 @@ export class PdfRenderer {
     if (options?.color) {
       this.doc.setTextColor(options.color);
     }
-
-    this.doc.text(text, this._cursorX, this._cursorY);
-
-    // Update the x and y position to the end of the rendered text
-    const textDimensions = this.doc.getTextDimensions(text);
-    this._cursorX += textDimensions.w;
-    this._cursorY += textDimensions.h - this.doc.getFontSize() * PT_TO_MM;
-    return this;
   }
 
-  public moveToTheNextLine(lines = 1, lineHeight?: number): PdfRenderer {
-    const lineHeightToUse = lineHeight || this.doc.getLineHeight();
-    // Increment y position by the line height in mm
-    this._cursorX = this._initialCursorX; // Reset x position to margin
-    this._cursorY += lines * lineHeightToUse * this.doc.getLineHeightFactor() * PT_TO_MM;
+  private updateCursorPositionAfterText(text: string) {
+    const textDimensions = this.doc.getTextDimensions(text);
+    this.cursor.x += textDimensions.w;
+    this.cursor.y += textDimensions.h - this.doc.getFontSize() * PT_TO_MM;
+  }
+}
 
-    //check if the cursorY exceeds the page height, if so, add a new page
-    if (this._cursorY > this.doc.internal.pageSize.getHeight() - this.options.marginVertical) {
-      this.doc.addPage();
-      this.resetCursor();
-    }
-    return this;
+class Cursor {
+  private _x: number;
+  private _y: number;
+  // Initial cursor positions is used for resetting the cursor
+  // or using the values when user determines custom cursor positions
+  private _initialX: number;
+  private _initialY: number;
+
+  constructor({ initialX, initialY }: { initialX: number; initialY: number; }) {
+    this._x = this._initialX = initialX;
+    this._y = this._initialY = initialY;
+  }
+
+  get x(): number {
+    return this._x;
+  }
+
+  set x(value: number) {
+    this._x = value;
+    // this._initialX = value; // Update initial X position when set by the user
+  }
+
+  get y(): number {
+    return this._y;
+  }
+
+  set y(value: number) {
+    this._y = value;
+    // this._initialY = value; // Update initial Y position when set by the user
+  }
+
+  public reset() {
+    this._x = this._initialX;
+    this._y = this._initialY;
+  }
+
+  public resetX() {
+    this._x = this._initialX;
+  }
+
+  public resetY() {
+    this._y = this._initialY;
   }
 }

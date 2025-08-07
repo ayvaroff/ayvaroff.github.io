@@ -96,7 +96,7 @@ export default {
       dates: "May 2017 - May 2018",
       description: [
         "mrspro.ru - a tool for construction companies",
-        'I was in a team which developed cross-platform application "ConstructionControl" (StroyControl)',
+        "I was in a team which developed cross-platform application \"ConstructionControl\" (StroyControl)",
         "added new features using JavaScript and React",
         "added new program interfaces using HTML5, CSS3, Material-UI",
         "organized frontend meet-ups in a company",
@@ -113,7 +113,7 @@ export default {
       description: [
         "worked in a small team that developed and supported internal tools using C# and .NET",
         "developed admin tools to modify and support game events and players save data using PHP, JS",
-        'worked on "Midnight Castle" game deloping new features using Lua',
+        "worked on \"Midnight Castle\" game deloping new features using Lua",
       ],
       stack: ["Lua", "C# | .NET", "PHP", "JavaScript"],
     },
@@ -125,7 +125,7 @@ export default {
       dates: "Sep 2014 - May 2015",
       description: [
         "Worked in a small startup and participated in iOS application development using Objective-C",
-        'supported and improved mobile application "Relax UP"',
+        "supported and improved mobile application \"Relax UP\"",
         "prototyped a game using SpriteKit and Swift",
       ],
       stack: ["Objective-C", "Swift", "iOS"],

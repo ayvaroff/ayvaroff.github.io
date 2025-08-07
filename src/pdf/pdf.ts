@@ -6,19 +6,19 @@ const FONT_NORMAL = `${FONT_FAMILY}-normal`;
 const FONT_BOLD = `${FONT_FAMILY}-bold`;
 
 const PAGE_MARGIN = 13; // Margin in millimeters
-const PADDING_BETWEEN_COLUMNS = 10; // Padding between columns in millimeters
 
 const COLOR_BLACK = "#000000";
 const COLOR_INDIGO_DYE = "#284b63";
 const COLOR_JET = "#353535";
 
+const DEFAULT_FONT_SIZE_OPTION = { fontSize: 11 };
 const SECTION_TITLE_FONT_OPTIONS = {
   fontStyle: "bold",
-  fontSize: 10,
+  fontSize: 14,
   color: COLOR_INDIGO_DYE,
 } satisfies RenderTextOptions;
 
-export async function generatePdfDocument(destination: string, content: typeof CV_CONTENT): Promise<void> {
+export async function generatePdfDocument(content: typeof CV_CONTENT): Promise<ArrayBuffer> {
   // First, download font and covert it to base64
   // let's hope this repository won't be changed or deleted
   const calibriNormalFontUrl = "https://github.com/dev-ext/font-face/raw/refs/heads/master/@fontface-other/calibri/calibri.ttf";
@@ -49,10 +49,10 @@ export async function generatePdfDocument(destination: string, content: typeof C
   // Set custom fonts
   pdfRenderer.doc.addFileToVFS(FONT_NORMAL, base64FontNormal).addFont(FONT_NORMAL, FONT_FAMILY, "normal");
   pdfRenderer.doc.addFileToVFS(FONT_BOLD, base64FontBold).addFont(FONT_BOLD, FONT_FAMILY, "bold");
-  pdfRenderer.doc.setFont(FONT_FAMILY).setFontSize(10).setLineHeightFactor(1.2);
+  pdfRenderer.setFontFamily(FONT_FAMILY).doc.setFontSize(DEFAULT_FONT_SIZE_OPTION.fontSize).setLineHeightFactor(1.2);
 
-  renderLeftColumn(pdfRenderer, content);
-  renderRightColumn(pdfRenderer, content);
+  renderContactsAndSkills(pdfRenderer, content);
+  renderMainContent(pdfRenderer, content);
 
   // Set metadata
   pdfRenderer.doc
@@ -64,42 +64,27 @@ export async function generatePdfDocument(destination: string, content: typeof C
     });
 
   // And save
-  await pdfRenderer.doc.save(destination, { returnPromise: true });
+  return await pdfRenderer.doc.output("arraybuffer");
 }
 
-function renderLeftColumn(pdfRenderer: PdfRenderer, content: typeof CV_CONTENT) {
-  const pageWidth = pdfRenderer.doc.internal.pageSize.getWidth();
-  const usableWidth = pageWidth - PAGE_MARGIN * 2 - PADDING_BETWEEN_COLUMNS;
-  const leftColWidth = usableWidth * 0.75;
+function renderMainContent(pdfRenderer: PdfRenderer, content: typeof CV_CONTENT) {
+  const pageWidth = pdfRenderer.getPageContentWidth();
 
-  // Render name
+  // Render section title
   pdfRenderer
     .moveToTheNextLine()
-    .renderText(content.full_name, {
-      fontStyle: "bold",
-      fontSize: 36,
-      color: COLOR_BLACK,
-    })
-    // Render title
-    .moveToTheNextLine(1, 24)
-    .renderText(content.title, {
-      fontStyle: "normal",
-      fontSize: 12,
-      color: COLOR_JET,
-    })
-    // Render section title
-    .moveToTheNextLine(2)
     .renderText("About Me", SECTION_TITLE_FONT_OPTIONS)
     // Render summary
-    .moveToTheNextLine(2)
-    .renderText(pdfRenderer.doc.splitTextToSize(content.summary, leftColWidth, { fontSize: 10 }), {
+    .moveToTheNextLine()
+    .renderText(pdfRenderer.doc.splitTextToSize(content.summary, pageWidth, DEFAULT_FONT_SIZE_OPTION), {
+      ...DEFAULT_FONT_SIZE_OPTION,
       fontStyle: "normal",
       color: COLOR_JET,
     })
     // Render section title
-    .moveToTheNextLine(3)
+    .moveToTheNextLine(2)
     .renderText("Experience", SECTION_TITLE_FONT_OPTIONS)
-    .moveToTheNextLine(2);
+    .moveToTheNextLine();
 
   // Render experience
   content.experience.forEach((experience) => {
@@ -115,24 +100,22 @@ function renderLeftColumn(pdfRenderer: PdfRenderer, content: typeof CV_CONTENT) 
       .moveToTheNextLine()
       .renderText(experience.dates, {
         fontStyle: "normal",
-        fontSize: 8,
+        fontSize: 10,
         color: COLOR_JET,
       })
       .moveToTheNextLine(2)
-      .renderText(pdfRenderer.doc.splitTextToSize(experience.description.trim(), leftColWidth, { fontSize: 10 }), {
-        fontSize: 10,
-      })
+      .renderText(pdfRenderer.doc.splitTextToSize(experience.description.trim(), pageWidth, DEFAULT_FONT_SIZE_OPTION), DEFAULT_FONT_SIZE_OPTION)
       .moveToTheNextLine()
       .renderText(stackTitle, { fontStyle: "bold" })
-      .renderText(pdfRenderer.doc.splitTextToSize(experience.stack.join(" | "), leftColWidth - stackTitleWidth), { fontStyle: "normal" })
+      .renderText(pdfRenderer.doc.splitTextToSize(experience.stack.join(" | "), pageWidth - stackTitleWidth), { fontStyle: "normal" })
       .moveToTheNextLine(2);
   });
 
   // Render section title
   pdfRenderer
-    .moveToTheNextLine(2)
+    .moveToTheNextLine()
     .renderText("Education", SECTION_TITLE_FONT_OPTIONS)
-    .moveToTheNextLine(2);
+    .moveToTheNextLine();
 
   // Render education
   content.education.forEach((education) => {
@@ -145,69 +128,73 @@ function renderLeftColumn(pdfRenderer: PdfRenderer, content: typeof CV_CONTENT) 
       .moveToTheNextLine()
       .renderText(education.degree, {
         fontStyle: "normal",
-        fontSize: 8,
+        fontSize: 10,
         color: COLOR_JET,
       })
       .moveToTheNextLine()
       .renderText(education.dates, {
         fontStyle: "normal",
-        fontSize: 8,
+        fontSize: 10,
         color: COLOR_JET,
       })
       .moveToTheNextLine(2)
-      .renderText(pdfRenderer.doc.splitTextToSize(education.description.trim(), leftColWidth, { fontSize: 10 }), {
-        fontSize: 10,
-      })
+      .renderText(pdfRenderer.doc.splitTextToSize(education.description.trim(), pageWidth, DEFAULT_FONT_SIZE_OPTION), DEFAULT_FONT_SIZE_OPTION)
       .moveToTheNextLine(2);
   });
-
-  // Reset cursor position for right column
-  pdfRenderer.cursorX = PAGE_MARGIN + leftColWidth + PADDING_BETWEEN_COLUMNS;
-  pdfRenderer.cursorY = PAGE_MARGIN;
 }
 
-function renderRightColumn(pdfRenderer: PdfRenderer, content: typeof CV_CONTENT) {
-  const pageWidth = pdfRenderer.doc.internal.pageSize.getWidth();
-  const usableWidth = pageWidth - PAGE_MARGIN * 2 - PADDING_BETWEEN_COLUMNS;
-  const rightColWidth = usableWidth * 0.25;
+function renderContactsAndSkills(pdfRenderer: PdfRenderer, content: typeof CV_CONTENT) {
+  const pageWidth = pdfRenderer.getPageContentWidth();
 
-  // make sure render happens on the first page
-  pdfRenderer.doc.setPage(1);
-
+  // Render name
   pdfRenderer
-    // Render email
-    .renderText("Email", {
+    .moveToTheNextLine()
+    .renderText(content.full_name, {
       fontStyle: "bold",
-      fontSize: 10,
+      fontSize: 18,
       color: COLOR_BLACK,
     })
+    // Render title
+    .renderText(` - ${content.title}`, {
+      fontStyle: "normal",
+      color: COLOR_JET,
+    })
     .moveToTheNextLine()
+    // Render email
+    .renderText("Email: ", {
+      ...DEFAULT_FONT_SIZE_OPTION,
+      fontStyle: "bold",
+      color: COLOR_BLACK,
+    })
     .renderText(content.contacts.email);
 
   // Render social media links
   content.social.forEach((social) => {
     pdfRenderer
-      .moveToTheNextLine(2)
-      .renderText(social.name)
       .moveToTheNextLine()
-      .renderText(social.url.replace("https://", ""));
+      .renderText(`${social.name}: `)
+      .renderTextWithLink(social.url.replace("https://", ""), social.url);
   });
+
+  const skillsTitle = "Skills: ";
+  const skillsTitleWidth = pdfRenderer.doc.getTextWidth(skillsTitle);
+  const languagesTitle = "Languages: ";
+  const languagesTitleWidth = pdfRenderer.doc.getTextWidth(languagesTitle);
 
   pdfRenderer
     // Render skills
-    .moveToTheNextLine(3)
-    .renderText("Skills", SECTION_TITLE_FONT_OPTIONS)
-    .moveToTheNextLine()
-    .renderText(pdfRenderer.doc.splitTextToSize(content.skills.join(" | "), rightColWidth), {
+    .moveToTheNextLine(2)
+    .renderText(skillsTitle, { fontStyle: "bold" })
+    .renderText(pdfRenderer.doc.splitTextToSize(content.skills.join(" | "), pageWidth - skillsTitleWidth), {
       fontStyle: "normal",
       color: COLOR_JET,
     })
     // Render languages
-    .moveToTheNextLine(3)
-    .renderText("Languages", SECTION_TITLE_FONT_OPTIONS)
     .moveToTheNextLine()
-    .renderText(pdfRenderer.doc.splitTextToSize(content.languages.join(" | "), rightColWidth), {
+    .renderText(languagesTitle, { fontStyle: "bold" })
+    .renderText(pdfRenderer.doc.splitTextToSize(content.languages.join(" | "), pageWidth - languagesTitleWidth), {
       fontStyle: "normal",
       color: COLOR_JET,
-    });
+    })
+    .moveToTheNextLine();
 }

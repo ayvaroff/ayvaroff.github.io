@@ -49,6 +49,7 @@ async function generateDocument() {
   await fs.promises.writeFile(OUTPUT_DOCUMENT_PATH, content, "utf-8");
   // PDF version
   if (!process.argv.includes("--no-pdf")) {
-    await generatePdfDocument(OUTPUT_PDF_PATH, cv);
+    const pdfContent = await generatePdfDocument(cv);
+    await fs.promises.writeFile(OUTPUT_PDF_PATH, Buffer.from(pdfContent));
   }
 }
