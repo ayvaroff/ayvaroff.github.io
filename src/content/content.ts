@@ -50,11 +50,11 @@ export default {
     {
       title: "Frontend Developer",
       logo_base64: logos.movika,
-      company: "Movika",
+      company: "Movika - interactive video constructor in VK",
       location: "Remote | Freelance",
       dates: "Aug 2021 - Sep 2023",
       description: dedent`
-        - Designed and implemented features for a custom interactive video editor (not a typical video editor) using TypeScript, React, and D3.js.
+        - Designed and implemented features for a custom interactive video constructor using TypeScript, React, and D3.js.
         - Made key architectural decisions to improve scalability and maintainability.
         - Refactored and modularized Redux store logic for better state management.
         - Introduced TypeScript and set up linters to improve code quality.
