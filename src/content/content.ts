@@ -42,8 +42,8 @@ export default {
         - Migrated CI/CD pipelines between Jenkins and GitLab CI, making deployments smoother.
         - Managed and extended Storybook with custom addons that teams use as tools in their daily work.
         - Improved compliance and core game components, always focusing on code quality.
-        - Helped design and roll out a system for iOS bundle deployment and delivery.
-        - Participated in technical interviews and mentored junior developers in the Evolution TypeScript Bootcamp.
+        - Co-designed and launched a robust system for iOS bundle deployment and delivery, supporting faster and safer releases.
+        - Actively contributed to team growth by conducting technical interviews and mentoring junior developers in the Evolution TypeScript Bootcamp.
       `,
       stack: ["TypeScript", "React", "Node.js", "PostgreSQL", "Python", "Docker", "GitLab CI", "AWS S3", "Jenkins", "Storybook"],
     },
@@ -55,11 +55,11 @@ export default {
       dates: "Aug 2021 - Sep 2023",
       description: dedent`
         - Designed and implemented features for a custom interactive video constructor using TypeScript, React, and D3.js.
-        - Made key architectural decisions to improve scalability and maintainability.
-        - Refactored and modularized Redux store logic for better state management.
-        - Introduced TypeScript and set up linters to improve code quality.
-        - Established Storybook for component development and testing.
-        - Wrote and maintained tests with Jest to ensure code reliability.
+        - Made architectural changes that helped the app scale and made it easier to maintain.
+        - Refactored the Redux store to improve state management and speed up adding new features.
+        - Set up TypeScript and linters to keep the codebase clean and reliable.
+        - Introduced Storybook to make component development and testing smoother for the team.
+        - Wrote and maintained unit tests with Jest to ensure code reliability.
       `,
       stack: ["TypeScript", "React", "Redux", "D3.js", "Jest", "Architectural Design", "Storybook"],
     },
