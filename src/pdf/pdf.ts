@@ -118,7 +118,7 @@ function renderMainContent(pdfRenderer: PdfRenderer, content: typeof CV_CONTENT)
     .moveToTheNextLine();
 
   // Render education
-  content.education.forEach((education) => {
+  content.education.forEach((education, index) => {
     pdfRenderer
       .renderText(education.name, {
         fontStyle: "bold",
@@ -138,8 +138,13 @@ function renderMainContent(pdfRenderer: PdfRenderer, content: typeof CV_CONTENT)
         color: COLOR_JET,
       })
       .moveToTheNextLine(2)
-      .renderText(pdfRenderer.doc.splitTextToSize(education.description.trim(), pageWidth, DEFAULT_FONT_SIZE_OPTION), DEFAULT_FONT_SIZE_OPTION)
-      .moveToTheNextLine(2);
+      .renderText(pdfRenderer.doc.splitTextToSize(education.description.trim(), pageWidth, DEFAULT_FONT_SIZE_OPTION), DEFAULT_FONT_SIZE_OPTION);
+
+    // There is no need to add new line after the last education entry, as it will be the end of the document.
+    // This might be not a great solution, but for now it works.
+    if (index < content.education.length - 1) {
+      pdfRenderer.moveToTheNextLine(2);
+    }
   });
 }
 

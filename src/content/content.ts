@@ -25,27 +25,54 @@ export default {
     },
   ],
   summary: dedent`
-    I'm a frontend developer with over 6 years of experience and a good grasp of backend work. My background covers web, cross-platform mobile, and fullstack projects - mostly with TypeScript, React, and Node.js. I've built everything from complex web apps to internal tools, and I'm comfortable working with CI/CD, Docker, and AWS S3. If needed, I can take a feature from idea to production, including backend and database work.
-  
-    I'm not afraid to step out of my comfort zone and learn new things, enjoy solving complex problems, and always aim to deliver work I'm proud of.
+    I'm a Frontend | Fullstack developer with 6+ years of experience building production web applications with TypeScript, React, Node.js, and Next.js. I work across the full stack, from building responsive UI and reusable frontend architecture to designing APIs, backend services, and database-driven features. I'm comfortable owning features end-to-end, including implementation, testing, CI/CD, Docker-based delivery and cloud integrations.
+
+    I focus on writing maintainable code, shipping reliable releases, and solving product problems with practical, scalable solutions.
   `,
-  skills: ["TypeScript", "JavaScript", "React", "Node.js" , "Python", "Next.js", "MongoDB", "PostgreSQL", "Docker", "Docker Compose", "CI/CD", "AWS S3", "RESTful APIs", "Git"],
+  skills: [
+    "TypeScript",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Next.js",
+    "MongoDB",
+    "PostgreSQL",
+    "Python",
+    "Docker",
+    "Docker Compose",
+    "CI/CD",
+    "AWS S3",
+    "RESTful APIs",
+    "Git",
+  ],
   experience: [
     {
       title: "Frontend | Fullstack Developer",
       logo_base64: logos.evolution,
       company: "Evolution",
       location: "Lisbon, Portugal | Riga, Latvia",
-      dates: "Jan 2020 – Present",
+      dates: "Jan 2020 - Jul 2026",
       description: dedent`
-        - Built and maintained web apps and internal tools with TypeScript, React, and Node.js.
-        - Migrated CI/CD pipelines between Jenkins and GitLab CI, making deployments smoother.
-        - Managed and extended Storybook with custom addons that teams use as tools in their daily work.
-        - Improved compliance and core game components, always focusing on code quality.
-        - Co-designed and launched a robust system for iOS bundle deployment and delivery, supporting faster and safer releases.
-        - Actively contributed to team growth by conducting technical interviews and mentoring junior developers in the Evolution TypeScript Bootcamp.
+        - Built and maintained internal web tools with TypeScript, React, and Node.js, supporting multiple teams.
+        - Developed backend services and APIs in Node.js to power internal workflows and automation.
+        - Migrated CI/CD pipelines between Jenkins and GitLab CI, reducing infrastructure load and improving deployment reliability.
+        - Managed and extended Storybook with custom addons used by teams in day-to-day development.
+        - Improved compliance and game core components with a strong focus on reliability and code quality.
+        - Co-designed and launched an iOS bundle deployment and delivery system supporting faster and safer releases.
+        - Contributed to hiring and team growth through technical interviews and mentoring in the Evolution TypeScript Bootcamp.
       `,
-      stack: ["TypeScript", "React", "Node.js", "PostgreSQL", "Python", "Docker", "GitLab CI", "AWS S3", "Jenkins", "Storybook"],
+      stack: [
+        "TypeScript",
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Python",
+        "Docker",
+        "GitLab CI",
+        "AWS S3",
+        "Jenkins",
+        "Storybook",
+      ],
     },
     {
       title: "Frontend Developer",
@@ -70,15 +97,28 @@ export default {
       location: "Remote | Freelance",
       dates: "May 2015 - Aug 2021",
       description: dedent`
-        - Developed various web and cross-platform mobile applications using React, Redux, Node.js, and Next.js.
-        - Built cross-platform mobile application using Cordova and Ionic Framework and published it on the App Store/Google Play.
-        - Created iOS application prototypes using Swift.
+        - Delivered web products end-to-end using Next.js and Node.js, from UI implementation to backend APIs.
+        - Built SaaS-style features with React/Next.js, including routing, server-side data handling, and admin functionality.
+        - Designed and integrated REST APIs, authentication flows, and database operations for fullstack applications.
+        - Developed and deployed cross-platform mobile apps with Cordova and Ionic, publishing to the App Store and Google Play.
+        - Built and shipped iOS prototypes in Swift to validate product ideas quickly.
+
       `,
-      stack: ["TypeScript", "JavaScript", "React", "Node.js", "Next.js", "Cordova", "Ionic Framework", "Angular", "Swift"],
+      stack: [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Next.js",
+        "Cordova",
+        "Ionic Framework",
+        "Angular",
+        "Swift",
+      ],
     },
     {
       title: "Frontend Developer",
-      logo_base64:logos.serenity,
+      logo_base64: logos.serenity,
       company: "Serenity",
       location: "Yoshkar-Ola, Mari El, Russia",
       dates: "May 2018 - Nov 2019",
@@ -137,21 +177,24 @@ export default {
       stack: ["TypeScript", "React", "Next.js", "MongoDB", "Docker", "Docker Compose", "CI/CD", "S3", "RESTful APIs"],
       source_code_link: null,
       link: "https://eduaccess.ru",
-      description: "A solo-developed SaaS application built with Next.js, featuring an admin dashboard for managing scholarship applications. The project includes a multi-step form, secure authentication, and role-based access. Deployed on Yandex Cloud with automated CI/CD pipelines using GitHub Actions, Docker containers, and MongoDB for data storage. Integrated cloud storage, backup, and managed environment variables for both development and production.",
+      description:
+        "A solo-developed SaaS application built with Next.js, featuring an admin dashboard for managing scholarship applications. The project includes a multi-step form, secure authentication, and role-based access. Deployed on Yandex Cloud with automated CI/CD pipelines using GitHub Actions, Docker containers, and MongoDB for data storage. Integrated cloud storage, backup, and managed environment variables for both development and production.",
     },
     {
       name: "Bootcamp final project",
       stack: ["TypeScript", "Scala", "WebSockets", "Webpack", "Canvas API"],
       source_code_link: "https://github.com/ayvaroff/multiplayer-game",
       link: null,
-      description: "A real-time multiplayer shooter game with a custom TypeScript frontend (ECS architecture, Canvas API) and a Scala backend (http4s, WebSocket, REST API). Built from scratch as a bootcamp final project.",
+      description:
+        "A real-time multiplayer shooter game with a custom TypeScript frontend (ECS architecture, Canvas API) and a Scala backend (http4s, WebSocket, REST API). Built from scratch as a bootcamp final project.",
     },
     {
       name: "CS50 final project",
       stack: ["Swift", "Python", "Flask", "RESTful APIs"],
       source_code_link: "https://github.com/ayvaroff/cs50-final-project",
       link: null,
-      description: "An iOS application designed for fitness and gym clubs, allowing users to view class schedules, register for classes, and communicate with the club via messages. This project was developed as a CS50 final project and includes both an iOS client and a Flask-based backend server with mocked data.",
+      description:
+        "An iOS application designed for fitness and gym clubs, allowing users to view class schedules, register for classes, and communicate with the club via messages. This project was developed as a CS50 final project and includes both an iOS client and a Flask-based backend server with mocked data.",
     },
   ],
   education: [
@@ -160,14 +203,16 @@ export default {
       location: "Yoshkar-Ola, Mari El, Russia",
       degree: "Specialist, Computer and Information Systems Security/Information Assurance",
       dates: "2012 - 2016",
-      description: "Studied cryptography and security, network security, information security management, risk analysis, and computer programming.",
+      description:
+        "Studied cryptography and security, network security, information security management, risk analysis, and computer programming.",
     },
     {
       name: "RUDN University: Peoples' Friendship University of Russia",
       location: "Moscow, Russia",
       degree: "Mathematics",
       dates: "2008 - 2012",
-      description: "Studied mathematical analysis, linear algebra, differential equations, probability theory, mathematical statistics, and numerical methods.",
-    }
-  ]
+      description:
+        "Studied mathematical analysis, linear algebra, differential equations, probability theory, mathematical statistics, and numerical methods.",
+    },
+  ],
 } as const;
