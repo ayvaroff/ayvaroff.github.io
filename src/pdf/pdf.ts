@@ -91,21 +91,62 @@ function renderMainContent(pdfRenderer: PdfRenderer, content: typeof CV_CONTENT)
     const stackTitle = "Stack: ";
     const stackTitleWidth = pdfRenderer.doc.getTextWidth(stackTitle);
 
+    if (experience.positions.length === 1) {
+      // Single role: "Company - Title" header
+      const position = experience.positions[0];
+      pdfRenderer
+        .renderText(`${experience.company} - ${position.title}`, {
+          fontStyle: "bold",
+          fontSize: 11,
+          color: COLOR_BLACK,
+        })
+        .moveToTheNextLine()
+        .renderText(`${position.dates} | ${experience.location}`, {
+          fontStyle: "normal",
+          fontSize: 10,
+          color: COLOR_JET,
+        })
+        .moveToTheNextLine(2)
+        .renderText(pdfRenderer.doc.splitTextToSize(position.description.trim(), pageWidth, DEFAULT_FONT_SIZE_OPTION), DEFAULT_FONT_SIZE_OPTION)
+        .moveToTheNextLine();
+    } else {
+      // Several roles at one company: company header, then each position with its own dates
+      pdfRenderer
+        .renderText(experience.company, {
+          fontStyle: "bold",
+          fontSize: 11,
+          color: COLOR_BLACK,
+        })
+        .moveToTheNextLine()
+        .renderText(`${experience.dates} | ${experience.location}`, {
+          fontStyle: "normal",
+          fontSize: 10,
+          color: COLOR_JET,
+        })
+        .moveToTheNextLine(2);
+
+      experience.positions.forEach((position, index) => {
+        if (index > 0) {
+          pdfRenderer.moveToTheNextLine();
+        }
+        pdfRenderer
+          .renderText(position.title, {
+            fontStyle: "bold",
+            fontSize: 10,
+            color: COLOR_JET,
+          })
+          .renderText(` (${position.dates})`, {
+            fontStyle: "normal",
+            fontSize: 10,
+            color: COLOR_JET,
+          })
+          .moveToTheNextLine()
+          .renderText(pdfRenderer.doc.splitTextToSize(position.description.trim(), pageWidth, DEFAULT_FONT_SIZE_OPTION), DEFAULT_FONT_SIZE_OPTION)
+          .moveToTheNextLine();
+      });
+    }
+
     pdfRenderer
-      .renderText(`${experience.company} - ${experience.title}`, {
-        fontStyle: "bold",
-        fontSize: 11,
-        color: COLOR_BLACK,
-      })
-      .moveToTheNextLine()
-      .renderText(experience.dates, {
-        fontStyle: "normal",
-        fontSize: 10,
-        color: COLOR_JET,
-      })
-      .moveToTheNextLine(2)
-      .renderText(pdfRenderer.doc.splitTextToSize(experience.description.trim(), pageWidth, DEFAULT_FONT_SIZE_OPTION), DEFAULT_FONT_SIZE_OPTION)
-      .moveToTheNextLine()
       .renderText(stackTitle, { fontStyle: "bold" })
       .renderText(pdfRenderer.doc.splitTextToSize(experience.stack.join(" | "), pageWidth - stackTitleWidth), { fontStyle: "normal" })
       .moveToTheNextLine(2);

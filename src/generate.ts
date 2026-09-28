@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 import nunjucks from "nunjucks";
 
 import cv from "./content/content.ts";

@@ -21,7 +21,7 @@
             </a>
           {% endif %}
         </div>
-        <p class="text-[var(--jet)] text-sm font-normal mt-2 leading-relaxed">{{ project.description }}</p>
+        <p class="text-[var(--jet)] text-sm font-normal mt-2 leading-relaxed">{{ project.description | striptags(true) | escape | nl2br }}</p>
 
         {% if project.stack and project.stack.length > 0 %}
           <div class="mt-3">

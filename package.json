@@ -13,7 +13,7 @@
   "scripts": {
     "build": "yarn build:css && yarn build:cv",
     "build:css": "npx @tailwindcss/cli -i ./src/styles.css -o ./docs/styles.css --minify",
-    "build:cv": "node --experimental-transform-types src/generate.ts"
+    "build:cv": "node src/generate.ts"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.10",
@@ -24,5 +24,8 @@
     "nunjucks": "^3.2.4",
     "tailwindcss": "^4.1.10",
     "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": "^26.8.2"
   }
 }
