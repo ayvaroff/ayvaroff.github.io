@@ -25,9 +25,9 @@ export default {
     },
   ],
   summary: dedent`
-    I'm a Senior Frontend | Fullstack developer with 9+ years of experience building production web applications with TypeScript, React, Node.js, and Next.js. I work across the full stack, from building responsive UI and reusable frontend architecture to designing APIs, backend services, and database-driven features. I'm comfortable owning features end-to-end, including implementation, testing, CI/CD, Docker-based delivery and cloud integrations.
+    Senior Frontend | Fullstack developer with 9+ years of experience shipping production web applications in TypeScript, React, Node.js, and Next.js. For the last several years I have owned frontend platform tooling for a large TypeScript monorepo shared by multiple product teams: linting and code-quality infrastructure, test and Storybook tooling, CI/CD pipelines, and internal documentation.
 
-    I focus on writing maintainable code, shipping reliable releases, and solving product problems with practical, scalable solutions.
+    I work end-to-end across the stack, from responsive UI and reusable component architecture to REST APIs, database-backed features, Docker-based delivery, and cloud integrations, and I have shipped a solo-built SaaS product from first commit to production. I use AI-assisted development tooling daily and mentor other engineers through interviews and bootcamps. I focus on maintainable code, predictable releases, and practical solutions to real product problems.
   `,
   skills: [
     "TypeScript",
@@ -99,11 +99,11 @@ export default {
     {
       logo_base64: logos.movika,
       company: "Movika (interactive video constructor for VK)",
-      location: "Remote | Part-time contract",
+      location: "Remote",
       dates: "Aug 2021 - Sep 2023",
       positions: [
         {
-          title: "Senior Frontend Developer",
+          title: "Frontend Developer (Part-time Contract)",
           dates: "Aug 2021 - Sep 2023",
           description: dedent`
             - Designed and implemented features for a custom interactive video constructor using TypeScript, React, and D3.js.
@@ -163,8 +163,7 @@ export default {
           title: "Software | Game Developer",
           dates: "Nov 2015 - Mar 2017",
           description: dedent`
-            - Developed and supported internal tools using C#/.NET, PHP, and JavaScript.
-            - Built admin panels for game event and player data management.
+            - Built internal tools and admin panels for game event and player data management using C#/.NET, PHP, and JavaScript.
             - Developed game features for “Midnight Castle” using Lua.
           `,
         },
@@ -181,10 +180,8 @@ export default {
           title: "Junior iOS Developer",
           dates: "Sep 2014 - May 2015",
           description: dedent`
-            - Participated in iOS app development using Objective-C and Swift.
-            - Supported and improved the “Relax UP” mobile app.
+            - Developed and maintained the “Relax UP” iOS app using Objective-C and Swift, including UI work and App Store deployment.
             - Prototyped a game with SpriteKit and Swift.
-            - Gained experience in mobile UI and app deployment.
           `,
         },
       ],
@@ -235,16 +232,14 @@ export default {
       location: "Yoshkar-Ola, Mari El, Russia",
       degree: "Specialist degree (5-year, MSc-equivalent), Computer and Information Systems Security",
       dates: "2012 - 2016",
-      description:
-        "Studied cryptography and security, network security, information security management, risk analysis, and computer programming.",
+      description: "Cryptography, network security, information security management, and risk analysis.",
     },
     {
       name: "RUDN University: Peoples' Friendship University of Russia",
       location: "Moscow, Russia",
       degree: "Mathematics",
       dates: "2008 - 2012",
-      description:
-        "Studied mathematical analysis, linear algebra, differential equations, probability theory, mathematical statistics, and numerical methods.",
+      description: "Mathematical analysis, linear algebra, probability theory, statistics, and numerical methods.",
     },
   ],
 } as const;

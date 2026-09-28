@@ -12,6 +12,12 @@ const COLOR_INDIGO_DYE = "#284b63";
 const COLOR_JET = "#353535";
 
 const DEFAULT_FONT_SIZE_OPTION = { fontSize: 11 };
+
+// Minimum number of lines that must fit on the page before a heading is rendered,
+// so a heading is never left alone at the bottom of a page.
+const MIN_LINES_AFTER_SECTION_TITLE = 9;
+const MIN_LINES_AFTER_ENTRY_HEADER = 5;
+const MIN_LINES_AFTER_POSITION_HEADER = 4;
 const SECTION_TITLE_FONT_OPTIONS = {
   fontStyle: "bold",
   fontSize: 14,
@@ -83,11 +89,14 @@ function renderMainContent(pdfRenderer: PdfRenderer, content: typeof CV_CONTENT)
     })
     // Render section title
     .moveToTheNextLine(2)
+    .ensureSpaceForLines(MIN_LINES_AFTER_SECTION_TITLE)
     .renderText("Experience", SECTION_TITLE_FONT_OPTIONS)
     .moveToTheNextLine();
 
   // Render experience
   content.experience.forEach((experience) => {
+    // Do not leave a company header alone at the bottom of a page
+    pdfRenderer.ensureSpaceForLines(MIN_LINES_AFTER_ENTRY_HEADER);
     const stackTitle = "Stack: ";
     const stackTitleWidth = pdfRenderer.doc.getTextWidth(stackTitle);
 
@@ -130,6 +139,7 @@ function renderMainContent(pdfRenderer: PdfRenderer, content: typeof CV_CONTENT)
           pdfRenderer.moveToTheNextLine();
         }
         pdfRenderer
+          .ensureSpaceForLines(MIN_LINES_AFTER_POSITION_HEADER)
           .renderText(position.title, {
             fontStyle: "bold",
             fontSize: 10,
@@ -155,12 +165,14 @@ function renderMainContent(pdfRenderer: PdfRenderer, content: typeof CV_CONTENT)
   // Render section title
   pdfRenderer
     .moveToTheNextLine()
+    .ensureSpaceForLines(MIN_LINES_AFTER_SECTION_TITLE)
     .renderText("Education", SECTION_TITLE_FONT_OPTIONS)
     .moveToTheNextLine();
 
   // Render education
   content.education.forEach((education, index) => {
     pdfRenderer
+      .ensureSpaceForLines(MIN_LINES_AFTER_ENTRY_HEADER)
       .renderText(education.name, {
         fontStyle: "bold",
         fontSize: 11,

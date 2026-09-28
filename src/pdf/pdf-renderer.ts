@@ -62,15 +62,27 @@ export class PdfRenderer {
 
   public renderTextWithLink(text: string, url: string, options?: RenderTextOptions): PdfRenderer {
     this.applyTextOptions(options);
+    this.ensureCursorIsOnPage();
     this.doc.textWithLink(text, this.cursor.x, this.cursor.y, { url, ...options });
-    this.updateCursorPositionAfterText(text);
+    this.cursor.x += this.doc.getTextWidth(text);
     return this;
   };
 
-  public renderText(text: string, options?: RenderTextOptions): PdfRenderer {
+  public renderText(text: string | string[], options?: RenderTextOptions): PdfRenderer {
     this.applyTextOptions(options);
-    this.doc.text(text, this.cursor.x, this.cursor.y);
-    this.updateCursorPositionAfterText(text);
+    const lines = Array.isArray(text) ? text : [text];
+    // Continuation lines keep the x position of the first line (matches jsPDF multi-line behavior)
+    const startX = this.cursor.x;
+
+    lines.forEach((line, index) => {
+      if (index > 0) {
+        this.cursor.x = startX;
+        this.cursor.y += this.getLineHeightInMm();
+      }
+      this.ensureCursorIsOnPage();
+      this.doc.text(line, this.cursor.x, this.cursor.y);
+      this.cursor.x += this.doc.getTextWidth(line);
+    });
     return this;
   }
 
@@ -79,9 +91,13 @@ export class PdfRenderer {
     // Increment y position by the line height in mm
     this.cursor.resetX(); // Reset x position to margin
     this.cursor.y += lines * lineHeightToUse * this.doc.getLineHeightFactor() * PT_TO_MM;
+    this.ensureCursorIsOnPage();
+    return this;
+  }
 
-    //check if the cursorY exceeds the page height, if so, add a new page
-    if (this.cursor.y > this.doc.internal.pageSize.getHeight() - this.options.marginVertical) {
+  public ensureSpaceForLines(lines: number): PdfRenderer {
+    const requiredHeight = lines * this.getLineHeightInMm();
+    if (this.cursor.y + requiredHeight > this.getPageBottomY()) {
       this.addPage();
     }
     return this;
@@ -106,10 +122,19 @@ export class PdfRenderer {
     }
   }
 
-  private updateCursorPositionAfterText(text: string) {
-    const textDimensions = this.doc.getTextDimensions(text);
-    this.cursor.x += textDimensions.w;
-    this.cursor.y += textDimensions.h - this.doc.getFontSize() * PT_TO_MM;
+  private getLineHeightInMm(): number {
+    // jsPDF line height is font size * line height factor, in points
+    return this.doc.getLineHeight() * PT_TO_MM;
+  }
+
+  private getPageBottomY(): number {
+    return this.doc.internal.pageSize.getHeight() - this.options.marginVertical;
+  }
+
+  private ensureCursorIsOnPage() {
+    if (this.cursor.y > this.getPageBottomY()) {
+      this.addPage();
+    }
   }
 }
 
