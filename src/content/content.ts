@@ -57,7 +57,7 @@ export default {
       positions: [
         {
           title: "Senior Frontend | Fullstack Developer",
-          dates: "2023 - Present",
+          dates: "Jun 2023 - Present",
           description: dedent`
             - Own frontend platform tooling for a large TypeScript monorepo used by multiple game and core teams: a shared ESLint config and custom ESLint plugin, Jest and Storybook upgrades, and an internal Docusaurus docs site.
             - Migrated build, validation, and release pipelines from Jenkins to GitLab CI.
@@ -68,7 +68,7 @@ export default {
         },
         {
           title: "Frontend | Fullstack Developer",
-          dates: "Jan 2020 - 2023",
+          dates: "Jan 2020 - Jun 2023",
           description: dedent`
             - Built and maintained the shared regulatory-compliance layer used across all games: reality checks, session limits and timers, regulator session handling, and responsible-gaming UI.
             - Co-designed the build and delivery system for game clients embedded in native iOS and Android apps: automated builds, localization asset publishing, and image optimization.
